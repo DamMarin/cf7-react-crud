@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { Menu, X } from "lucide-react";
+import { AuthButton } from "@/components/AuthButton.tsx";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,12 +31,7 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
-            to="/products"
-            className="block md:inline hover:underline hover:underline-offset-4 p-4 md:p-1"
-          >
-            Products
-          </Link>
+          <AuthButton />
         </nav>
       </div>
     </header>
